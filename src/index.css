@@ -1,0 +1,374 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 243 75% 59%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 262 83% 68%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 25% 10%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 175 70% 41%;
+    --accent-foreground: 0 0% 100%;
+    --accent-soft: 175 70% 96%;
+
+    --success: 152 76% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 25% 10%;
+
+    --destructive: 351 89% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 243 75% 59%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(243 75% 59%), hsl(262 83% 68%));
+    --gradient-accent: linear-gradient(135deg, hsl(175 70% 41%), hsl(190 80% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(243 75% 59%) 0%, hsl(262 83% 68%) 50%, hsl(175 70% 41%) 100%);
+    --shadow-elegant: 0 10px 30px -10px hsl(243 75% 59% / 0.3);
+    --shadow-glow: 0 0 40px hsl(262 83% 68% / 0.35);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 240 35% 10%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 243 75% 59%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 30% 16%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 240 30% 18%;
+    --sidebar-ring: 262 83% 68%;
+  }
+
+  .dark {
+    --background: 220 25% 10%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 243 80% 67%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 262 83% 75%;
+
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 25% 18%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 175 70% 50%;
+    --accent-foreground: 220 25% 10%;
+    --accent-soft: 175 50% 20%;
+
+    --success: 152 70% 50%;
+    --success-foreground: 220 25% 10%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 220 25% 10%;
+
+    --destructive: 351 80% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 25% 18%;
+    --input: 220 25% 18%;
+    --ring: 243 80% 67%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(243 80% 67%), hsl(262 83% 75%));
+    --gradient-accent: linear-gradient(135deg, hsl(175 70% 50%), hsl(190 80% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(243 80% 67%) 0%, hsl(262 83% 75%) 50%, hsl(175 70% 50%) 100%);
+    --shadow-elegant: 0 10px 30px -10px hsl(243 80% 67% / 0.4);
+    --shadow-glow: 0 0 40px hsl(262 83% 75% / 0.4);
+    
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 243 80% 67%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 262 83% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 md:px-8;
+  }
+  
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-balance;
+  }
+  
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-balance;
+  }
+  
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold tracking-tight text-balance;
+  }
+  
+  .heading-sm {
+    @apply text-xl md:text-2xl font-semibold tracking-tight text-balance;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground ring-offset-background transition-all duration-300 hover:bg-primary/90 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+}
+
+/* Tiptap Editor Styles */
+.ProseMirror {
+  @apply focus:outline-none;
+}
+
+/* Professional Blog Content Formatting */
+.tiptap-content,
+.ProseMirror {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content p,
+.ProseMirror p {
+  margin-bottom: 1.75rem;
+  margin-top: 0;
+  line-height: 1.8;
+  letter-spacing: -0.003em;
+  word-break: break-word;
+}
+
+.tiptap-content h1,
+.ProseMirror h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.022em;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content h2,
+.ProseMirror h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.019em;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content h3,
+.ProseMirror h3 {
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.014em;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content h4,
+.ProseMirror h4 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.75rem;
+  margin-bottom: 0.875rem;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content h5,
+.ProseMirror h5,
+.tiptap-content h6,
+.ProseMirror h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content ul,
+.tiptap-content ol,
+.ProseMirror ul,
+.ProseMirror ol {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  padding-left: 1.75rem;
+}
+
+.tiptap-content li,
+.ProseMirror li {
+  margin-bottom: 0.75rem;
+  line-height: 1.8;
+  padding-left: 0.375rem;
+}
+
+.tiptap-content li p,
+.ProseMirror li p {
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-content blockquote,
+.ProseMirror blockquote {
+  border-left: 4px solid hsl(var(--primary));
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: hsl(var(--muted-foreground));
+  background: hsl(var(--muted) / 0.3);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.tiptap-content blockquote p,
+.ProseMirror blockquote p {
+  margin-bottom: 0.5rem;
+}
+
+.tiptap-content img,
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2.5rem auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.tiptap-content iframe,
+.ProseMirror iframe {
+  max-width: 100%;
+  margin: 2.5rem auto;
+  display: block;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  aspect-ratio: 16/9;
+}
+
+.tiptap-content code,
+.ProseMirror code {
+  background-color: hsl(var(--muted));
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.9em;
+  font-family: 'Courier New', Courier, monospace;
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.tiptap-content pre,
+.ProseMirror pre {
+  background-color: hsl(var(--muted));
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 2rem 0;
+  border: 1px solid hsl(var(--border));
+  line-height: 1.6;
+}
+
+.tiptap-content pre code,
+.ProseMirror pre code {
+  color: inherit;
+  padding: 0;
+  background: none;
+  font-size: 0.9rem;
+  border: none;
+}
+
+.tiptap-content a,
+.ProseMirror a {
+  color: hsl(var(--primary));
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+.tiptap-content a:hover,
+.ProseMirror a:hover {
+  text-decoration-thickness: 2px;
+  opacity: 0.8;
+}
+
+.tiptap-content strong,
+.ProseMirror strong {
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.tiptap-content em,
+.ProseMirror em {
+  font-style: italic;
+}
+
+.tiptap-content u,
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.tiptap-content hr,
+.ProseMirror hr {
+  border: none;
+  border-top: 1px solid hsl(var(--border));
+  margin: 3rem 0;
+}

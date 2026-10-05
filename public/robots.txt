@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /blog-admin
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /auth
+Disallow: /checkout
+Disallow: /payment-success
+Disallow: /payment-cancelled
+
+Sitemap: https://maarifasasa.com/sitemap.xml

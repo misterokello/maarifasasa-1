@@ -1,0 +1,1 @@
+ALTER TABLE public.popups ADD COLUMN tally_form_id text DEFAULT NULL;

@@ -1,0 +1,22 @@
+# Maarifasasa
+
+> Pan-African workforce development company training 1 million young Africans in digital skills and connecting them to global earning opportunities by 2030.
+
+Maarifasasa offers bootcamps, certificate programs, the Talent Accelerator, the Digital Field Agents program, an AI Pathway Advisor, and an affiliate program. Headquartered in Lira, Uganda.
+
+## Pages
+
+- [Home](/): Overview of programs and the learn-to-earn mission.
+- [About](/about): Mission, founder story, and Pan-African vision.
+- [Programs](/programs): Digital Field Agents, 10X Programme with WITU, and Agency Programme.
+- [Learning](/learning): Talent Accelerator, Bootcamps, and Certificate Programs.
+- [Courses](/courses): Catalogue of available courses.
+- [Learn & Earn](/learn-and-earn): How learners earn while studying.
+- [AI Pathway Advisor](/advisor): Personalized career pathway recommendations.
+- [Blog](/blog): Articles on digital skills, careers, and success stories.
+- [Contact](/contact): Get in touch for training or partnerships.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms of Service](/terms)

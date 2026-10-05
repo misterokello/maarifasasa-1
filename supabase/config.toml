@@ -1,0 +1,37 @@
+project_id = "arrmktdasakaqcxdducu"
+
+[functions.affiliate-track]
+verify_jwt = false
+
+[functions.affiliate-proxy]
+verify_jwt = false
+
+[functions.thinkific-course-detail]
+verify_jwt = false
+
+[functions.advisor-recommend]
+verify_jwt = false
+
+[functions.advisor-chat]
+verify_jwt = false
+
+[functions.advisor-save]
+verify_jwt = false
+
+[functions.mentor-call-request]
+verify_jwt = false
+
+[functions.google-oauth-callback]
+verify_jwt = false
+
+[functions.advisor-chat-persist]
+verify_jwt = false
+
+[functions.resend-webhook]
+verify_jwt = false
+
+[functions.careers-apply-notify]
+verify_jwt = false
+
+[functions.thinkific-completion-sync]
+verify_jwt = false
